@@ -2,32 +2,33 @@
 class Matrix
 {
 public:
+	int x_size;
+	int y_size;
+
+	double matrix[10][10];
+	Matrix()=default;
+
+	Matrix(int xs , int ys);
+
 	Matrix operator =(Matrix & data);
 
 	bool operator ==(Matrix & data);
 
-	Matrix operator +(Matrix & data);
-
-	Matrix operator +(double data);
+	Matrix operator +(Matrix data);
 
 	Matrix operator -(Matrix & data);
 
-	Matrix operator -(double data);
+	void operator *(double data);
 
 	Matrix operator *(Matrix & data);
 
-	Matrix operator *(double data);
+	void operator <<(Matrix  &data);
 
-	Matrix operator <<(Matrix & data);
-
-	Matrix operator >>(Matrix & data);
+	void operator >>(Matrix  &data);
 
 	Matrix operator ~();
 
 private:
-	static const int x_size = 10;
-	static const int y_size = 10;
 
-	int matrix[x_size][y_size];
 };
 
