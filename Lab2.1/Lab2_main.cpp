@@ -139,7 +139,7 @@ int main()
 	{
 		Matrix m1(x-1, y);
 		Matrix m2(x-1, 1);
-		for (int i = 0; i < m1.y_size; i++)
+		/*for (int i = 0; i < m1.y_size; i++)
 		{
 			for (int j = 0; j < m1.x_size; j++)
 			{
